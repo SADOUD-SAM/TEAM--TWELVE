@@ -17,6 +17,7 @@
     let audio3 = document.getElementById("son3");
     let audio4 = document.getElementById("son4");
     let audioWrongClick = document.querySelector("#ButtonWrongClick");
+    let strict = document.querySelector(".strict")
 
 
 
@@ -30,6 +31,7 @@
     let interval;
     let matchingArrays= true;
     let game;
+     
     
     
 
@@ -44,19 +46,27 @@
         
         playerOrder.push(1)
         console.log(playerOrder)
+        console.log(goodClick("playerOrder length:"+playerOrder.length));
+        console.log("blue onclick :"+level.length)
+        console.log("blue onclick :"+light.length)
+       
+       
+       
         goodClick();
+        
         }
 
 
     let greenClick =green.onclick = function(){
         green.style.background = "lightgreen";
-    
         audio4.play();
         setTimeout(darkcolors,400)
         sound =true;
         playerOrder.push(4)
         console.log(playerOrder)
+        
         goodClick();
+        
         }
 
 
@@ -69,6 +79,8 @@
         playerOrder.push(3)
         console.log(playerOrder);
         goodClick();
+        
+    
     }
 
 
@@ -80,7 +92,9 @@
         playerOrder.push(2)
         audio2.play();
         console.log(playerOrder);
+       
         goodClick();
+        
         
     }
     
@@ -91,6 +105,10 @@
         greenClick ();
     }
 
+
+
+
+
         function lightcolors(){
         red.style.background ="white";
         yellow.style.background = "white";
@@ -99,24 +117,36 @@
     
     }
 
+
+
         function darkcolors(){
-        red.style.background ="#ee6055";
-        green.style.background ="#7DD877";
-        yellow.style.background = "#ffd97d";
-        blue.style.background = "#38a3a5";
+        red.style.background ="darkred";
+        green.style.background ="darkgreen";
+        yellow.style.background = "goldenrod";
+        blue.style.background = "darkblue";
     
     }
+
+
+
+    
+
 
         function clickOnButton(){
         if (OnButton.checked == true){
             on = true;
             off.innerHTML = "ON";
+            levelCounter.innerHTML = ("salut, clique sur start et à toi de jouer!!")
+            
          } else{
             on = false;
-            levelCounter.innerHTML = "Level : 0";
+        
             clearInterval(interval)
             off.innerHTML ="OFF";
-
+            startButton.innerHTML ="START"
+            
+             
+        
         }
         }
         
@@ -125,40 +155,65 @@
         function clickOffButton(){
         if (off.checked == true){
             off = true;
-            compturn =false;
+            game =false;
             darkcolors();
             level =0;
             light = 0;
             sound = false;
             canClick = false;
             on = true;
+            levelCounter.innerHTML = "clique sur start pour commencer ";
+            startButton.innerHTML ="START"
+        
+
+         }
+
+            
+            
            
         }
-    }
-
+    
     off.addEventListener('click',clickOffButton)
+    
+
+
+    
 
         function clickStartButton(){
         if (on){
         startButton.innerHTML="START";
-
+        startButton.style.background = "red";
+        startButton.style.color = "white";
+        levelCounter.innerHTML =("Clique sur -ON -pour allumer le jeu")
+        
         
         }else{
             sound = false;
             darkcolors();
+            startButton.innerHTML = "START"
         }
         }
+
 
          clickStartButton();
          
          startButton.onclick = function(){
          startButton.innerHTML ="C'est parti!";
          randomColors();
-
+         
+         
+        
         }
         
+        
+
+        
+            
+
+
+
         function randomColors(){
-        computerOrder =[];
+    
         playerOrder =[];
         level = 1;
         light = 0;
@@ -167,17 +222,21 @@
         sound =true;
         interval = 0;
         //good = true;
-        levelCounter.innerHTML = "level-"+ 1;
-        for(var i = 0;i<5; i++){
+        levelCounter.innerHTML = "Level-"+ 1;
+        for(var i = 0;i<10; i++){
         computerOrder.push(Math.floor(Math.random() * 4)+1)
          console.log(computerOrder);
         
                 } 
                 game = true;
                interval = setInterval(orderColor,800)
+               
               
             }
-
+        
+        
+        
+        
         function orderColor() {
             on =false;
             if(light==level){
@@ -185,11 +244,12 @@
               game = false;
                darkcolors()
                 on = true;
+                
             }
            if( game){
             on = true;
             darkcolors();
-            setTimeout(() => {
+           // setTimeout(() => {
             if(computerOrder[light] == 1)
              numberOne();
             if(computerOrder[light] == 2)
@@ -201,11 +261,11 @@
             if(computerOrder[light] == 4) 
              numberFour();
             light ++;
-           }, 200);
-    
-             console.log(orderColor)
-             sound = true;
-        }
+           //}, 300);
+           setTimeout(game,300)
+          console.log(orderColor)
+         }
+        
     }
   
    //  function computerOrderArray(){
@@ -255,93 +315,85 @@
             green.style.background = "white";
         
             }
-    
-           
 
 
+           function generateLight(){
+               if(light){
+                   if(light>= level){
+                       clearInterval(interval)
+                   }
+               }else{
+                   light++;
+               }
+
+           }
+            
 
 
+          let computerOrderlength = computerOrder.length
+         let playerorderlength = playerOrder.length;
          
-       function goodClick(){
-       
-           if(playerOrder[0] == computerOrder[0]){
+         function goodClick(){
+          
+            console.log( playerOrder[0] );
+            console.log( computerOrder[playerOrder.length-1] );
+            console.log( playerOrder.length )
+            console.log( level )
+
+            if(playerOrder[playerOrder.length-1]==computerOrder[playerOrder.length-1] && playerOrder.length == level){
+            console.log("gagné")
+            game = true;
+            playerOrder=[];
+            level ++;
+            light =0;
+            levelCounter.innerHTML ="Level"+ level
+            matchingArrays = true
+            interval =setInterval(orderColor,800)
             matchingArrays = true;
-           
+           }else{
+               matchingArrays = false;
+           }
+           if(playerOrder[playerOrder.length-1]!==computerOrder[playerOrder.length-1] && playerOrder.length !== level){
+            console.log("perdu")
+            matchingArrays =false;
             game = true;
             playerOrder =[];
             level++
-            levelCounter.innerHTML = "level ="+ level;
             light = 0;
-            interval = setInterval(orderColor,1000)
-            
-           
-           }
-           else{
-               matchingArrays =false;
-               randomColors();
-               clearTimeout(interval)
-              // audioWrongClick.play
-              // darkcolors()
-              // game= true;
-               
-              level =1;
-              // window.alert("wrong click")
-              // light == level;
-              // clearInterval(interval)
-             //  playerOrder =[];
-
-               
-           }
-           if(playerOrder.length == 5 && matchingArrays == true){
-            win();
-           }
-        }
-           
-           /*if(playerOrder[playerOrder.length-1] !== computerOrder[playerOrder.length-1])
-           matchingArrays =false;
-           if(playerOrder.length == 5 && matchingArrays == true){
-               win()
-
-               
-           }
-           if(matchingArrays =false){
-            darkcolors();
-            randomColors();
             level =1;
-            window.alert("wrong click")
-
-           }
-           if(playerOrder[playerOrder.length-1] === computerOrder[playerOrder.length-1]){
-               matchingArrays = true;
-               compturn = true;
-            playerOrder =[];
-            level++
-            levelCounter.innerHTML = "level ="+ level;
-            light = 0;
-            interval = setInterval(orderColor,1000)
-
-           /*}if(level == 3 && matchingArrays== true){
-            compturn = true;
-            playerOrder =[];
-            level++
-            levelCounter.innerHTML = "level ="+ level;
-            light = 0;
-            interval = setInterval(orderColor,1000)
-
-           }*/
-        
+            levelCounter.innerHTML =  "No !!try again ";
+             setTimeout(() => {
+             levelCounter.innerHTML = "level: 1"
+                   }, 800);
+                   interval =setInterval(orderColor,800)
+                }
+            if(matchingArrays==true&& level==10){
+                win();
+            }
+        }
+            function win(){
+             window.alert("YOU WIN,CONGRATS");
+             compturn =false;
+             lightcolors();
+             off =true;
+     
+            }
         
 
-       function win(){
-           window.alert("YOU WIN,CONGRATS");
-           compturn =false;
-           lightcolors();
 
-       }
-        
-      
-       
-    
-         
 
-       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
