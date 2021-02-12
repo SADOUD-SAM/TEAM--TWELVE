@@ -1,7 +1,3 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}*
-
 body {   
     display: grid;
     margin: 0;

@@ -79,7 +79,7 @@
         playerOrder.push(3)
         console.log(playerOrder);
         goodClick();
-        
+        console.log(playerOrder)
     
     }
 
@@ -120,10 +120,10 @@
 
 
         function darkcolors(){
-        red.style.background ="darkred";
-        green.style.background ="darkgreen";
-        yellow.style.background = "goldenrod";
-        blue.style.background = "darkblue";
+        red.style.background ="#ee6055";
+        green.style.background ="#7DD877";
+        yellow.style.background = "#ffd97d";
+        blue.style.background = "#38a3a5";
     
     }
 
@@ -182,7 +182,7 @@
         function clickStartButton(){
         if (on){
         startButton.innerHTML="START";
-        startButton.style.background = "red";
+        startButton.style.background = "#7DD877";
         startButton.style.color = "white";
         levelCounter.innerHTML =("Clique sur -ON -pour allumer le jeu")
         
@@ -334,66 +334,55 @@
          let playerorderlength = playerOrder.length;
          
          function goodClick(){
-          
-            console.log( playerOrder[0] );
-            console.log( computerOrder[playerOrder.length-1] );
-            console.log( playerOrder.length )
-            console.log( level )
-
-            if(playerOrder[playerOrder.length-1]==computerOrder[playerOrder.length-1] && playerOrder.length == level){
-            console.log("gagné")
-            game = true;
-            playerOrder=[];
-            level ++;
-            light =0;
-            levelCounter.innerHTML ="Level"+ level
-            matchingArrays = true
-            interval =setInterval(orderColor,800)
-            matchingArrays = true;
-           }else{
-               matchingArrays = false;
-           }
-           if(playerOrder[playerOrder.length-1]!==computerOrder[playerOrder.length-1] && playerOrder.length !== level){
-            console.log("perdu")
-            matchingArrays =false;
-            game = true;
-            playerOrder =[];
-            level++
-            light = 0;
-            level =1;
-            levelCounter.innerHTML =  "No !!try again ";
-             setTimeout(() => {
-             levelCounter.innerHTML = "level: 1"
-                   }, 800);
-                   interval =setInterval(orderColor,800)
+             if(playerOrder[0]==computerOrder[0]){
+                 game = true;
+                 playerOrder=[];
+                 level ++;
+                 light =0;
+                 levelCounter.innerHTML ="Level"+ level
+                 matchingArrays = true
+                 interval =setInterval(orderColor,800)
+                 matchingArrays = true;
+             }
+             if(computerOrder[playerOrder.length-1] !== playerOrder[playerOrder.length-1]){
+                 
+                 levelCounter.innerHTML ="NO! Try again" +"Level 0";
+                 matchingArrays = false;
+                 darkcolors();
+                 setTimeout(() => {
+                    game =true;
+                    playerOrder =[];
+                    level = 0;
+                    flash=0;
+                 }, 800);
+                 
+                 
+                 
+                 
                 }
-            if(matchingArrays==true&& level==10){
-                win();
-            }
-        }
-            function win(){
-             window.alert("YOU WIN,CONGRATS");
-             compturn =false;
-             lightcolors();
-             off =true;
-     
-            }
+                
+         }
+         
+
+           
+            
         
 
 
 
+        
 
+       function win(){
+           window.alert("YOU WIN,CONGRATS");
+           compturn =false;
+           lightcolors();
+           off =true;
 
+       }
+        
+      
+       
+    
+         
 
-
-
-
-
-
-
-
-
-
-
-
-            
+       

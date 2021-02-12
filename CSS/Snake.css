@@ -1,4 +1,6 @@
-
+body{
+    margin: 0;
+}
 /*---TITRE DU JEU ET LE BACK---*/
 main{
     display: flex;
