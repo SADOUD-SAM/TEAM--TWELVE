@@ -3,7 +3,6 @@ body {
     margin: 0;
     font-family:'Roboto-regular', sans-serif;
 }
-
 /*---TITRE DU JEU ET LE BACK---*/
 main{
     display: flex;
@@ -11,7 +10,6 @@ main{
     justify-content: center;
     height: 600px;
 }
-
 .Game_Name{
     font-weight: 700;
 }
@@ -29,8 +27,7 @@ h1{
     margin-right: 60px;
     margin-bottom: 20px;
     font-weight: 700;
-}
-    
+}  
 .Game_Name > a {
     color: #312C51;
     font-family:'Roboto-light', sans-serif;
@@ -69,24 +66,18 @@ h2{
     font-size: 18px;
     text-decoration: none;
 }
-
 .expli > a {
     text-decoration: none;
 }
 /*---EXPLICATION DU JEU---*/
-
-
-
 .simon{
     font-family: 'Roboto-bold', sans-serif;
 }
-
 .level{
     font-family: 'Roboto-bold', sans-serif;
     color:#c89446;
     font-size: 25px;
 }
-
 h1{
     font-family: 'Roboto-bold', sans-serif;
     color:#c89446;;
@@ -94,17 +85,12 @@ h1{
     margin-top: 50px;
     cursor: pointer;
 }
-
 .card{
     display: flex;
     align-items: center;
     flex-flow: column-reverse;
-
 }
-
-
 /* Couleurs  */
-
 .yellow{
     background-color:#ffd97d;
     height:150px;
@@ -114,7 +100,6 @@ h1{
     outline: none;
     animation: colors 3s;  
 }
-
 .green{
     background-color:#7DD877;
     height:150px;
@@ -124,7 +109,6 @@ h1{
     outline: none;
     animation: colors 4s;
 }
-
 .blue{
     text-align: center;
     background-color:#38a3a5;
@@ -135,7 +119,6 @@ h1{
     outline: none;
     animation: colors1 5s;    
 }
-
 .red{
     cursor: pointer;
     background-color:#ee6055;
@@ -145,14 +128,12 @@ h1{
     outline: none;
     animation: colors1 2s;
 }
-
 .buttons{
     display: grid;
     grid-template-columns: 1fr 1fr;
     cursor: pointer;   
     margin: 5%;
 }
-
 .buttons :hover{
     border:5px solid white;
 }
@@ -184,11 +165,9 @@ h1{
     outline: none;
     animation: colors 6s;
 }
-
 .onButton p{
    margin: 0; 
 }
-
 .offButtom{
     z-index: 2;
     display: flex;
@@ -207,7 +186,6 @@ h1{
     cursor: pointer;
     outline: none;
 }
-
 .start{
     z-index: 2;
     width: 120px;
@@ -223,11 +201,9 @@ h1{
     cursor: pointer;
     outline: none;
 }
-
 .checkboxStart{
     z-index:3;
 }
-
 .off{
     z-index: 2;
     border-radius: 20px;
@@ -240,10 +216,7 @@ h1{
     cursor: pointer;
     outline: none;
 }
-
 /* Boutons */
-
-
 
 /* Keyframes */
 @keyframes colors {
@@ -287,8 +260,6 @@ h1{
 
     }
     .onButton{
-
-
         left:542px ;
         bottom: -17px;
         border-radius: 100%;
