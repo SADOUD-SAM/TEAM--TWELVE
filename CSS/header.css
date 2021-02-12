@@ -1,0 +1,103 @@
+/*----NAV---*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+.nav{
+    align-items: center;
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    font-family:'Roboto-regular', sans-serif; 
+}
+.logoteam{
+    color:#312C51 ;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 29px;
+    font-style: normal;
+    font-family:'Roboto-regular', sans-serif;
+}
+.listnav{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    right: 35px;
+}
+.navlink{
+    color:#312C51;
+    padding-left: 30px;
+    padding-right: 30px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 300;
+    right: 15px;
+    font-family:'Roboto-regular', sans-serif;
+}
+.navlink:active{
+    color: #F1AA9B;
+    padding-left: 30px;
+    padding-right: 30px;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Roboto-bold', sans-serif;
+}
+.navlink:hover{
+    color: #F1AA9B;
+}
+
+/*--- SOURCE : https://www.pierre-giraud.com/html-css-apprendre-coder-cours/creation-menu-deroulant/ ---*/
+
+li:hover .sous-nav{
+    display: block;
+}
+
+.nav-deroulant{
+
+        position: relative;
+}
+
+.sous-nav{
+    width: 100%;
+    position: absolute;
+    display: none ;
+    font-family:'Roboto-regular', sans-serif; 
+    list-style: none;
+    border-radius: 20px;
+    text-align: left;
+    backdrop-filter: blur(15px);
+    box-shadow: 3px 1px 3px 0.2px rgb(0 0 0 / 10%);
+    
+}
+
+.sous-nav > li > a{
+    text-decoration: none;
+    color: #312C51;
+    font-size: 14px;
+}
+
+.sous-nav > li > a:hover{
+    text-decoration: none;
+    color: #F1AA9B;
+    
+}
+
+.sous-nav:hover{
+
+    display: block  ;
+}
+
+/*----NAV---*/

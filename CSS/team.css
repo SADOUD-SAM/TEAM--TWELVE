@@ -1,0 +1,263 @@
+body{
+    display:grid;
+    margin: 0;
+}
+/*---BACKGROUND---*/ 
+.round{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index:-1;  
+}
+.round1{
+    background-color: #F1AA9B;
+    width: 500px;
+    height: 500px;
+    border-radius: 600px;
+    position: relative;
+    top: 12%;
+    left: 77%;
+    order: 2;
+}
+.round2{
+    background-color: #F0C38E;
+    width: 500px;
+    height: 500px;
+    border-radius: 600px;
+    order: 1;
+    overflow: hidden;
+    right: 5%;
+    top: 15%;
+    position: relative;
+} 
+/*---BACKGROUND---*/
+
+/*---MAIN---*/
+
+.Game_Name{
+    font-weight: 700;
+}
+/*---MAIN---*/
+
+/*---TITRE DU JEU ET LE BACK---*/
+h1{
+    font-family: 'Roboto-bold', sans-serif;
+    color: #312C51;
+    flex-grow: 2;
+    text-align: center;
+    text-transform: uppercase;
+    right: 2%;
+    position: relative;
+}
+
+.Game_Name{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+    
+.Game_Name > a {
+    color: #312C51;
+    font-family:'Roboto-regular', sans-serif;
+    text-decoration: none;
+} 
+
+.Back{
+
+    z-index: 10;
+}
+/*---TITRE DU JEU ET LE BACK---*/
+
+/*---CARD GLOBAL---*/
+.card-global{
+    position: relative;
+    margin: 5%;
+    height:75%;
+
+}
+/*---CARD GLOBAL---*/
+/*---CARD FRONT---*/
+.card{
+    display: grid;
+    width: 100%;
+    height: 450px;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 400px 400px;
+    justify-items: center;
+    justify-content: center;
+    
+}
+
+.card-front{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    right: 0px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+    transition:1s;
+    transform: rotateY(0deg);
+    
+    
+}
+/*---SOURCE:https://www.youtube.com/watch?v=XeX1vsaufF0&t=72s ---*/
+h2{
+    font-size: 15px;
+    font-family: 'Roboto-bold', sans-serif;
+    color: #312C51;
+    flex-grow: 2;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 10px;
+    font-family: 'Roboto-bold', sans-serif;
+    color: #312C51;
+    flex-grow: 2;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    bottom: 6%;
+}
+
+.card-font .profil{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+img{
+    width: 100px;
+    margin: 5%;
+    border: #312C51;
+}
+.imgc .profil{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.skills{
+    color: #312C51;
+    display:flex ;
+    position: relative;
+    font-family:'Roboto-regular', sans-serif; 
+    list-style: none;
+    margin: 0 10px;
+    font-size: 3em;
+    right: 10%;
+    bottom: 44%;
+    
+} 
+.iconsk{
+    margin: 0 8px;
+    
+}
+.socialmedia{
+    margin: 5%;
+}
+.iconmedia{
+    color: #312C51;
+    display:flex ;
+    position: relative;
+    font-family:'Roboto-regular', sans-serif; 
+    list-style: none;
+    margin: 0 10px;
+}
+
+.iconrs{
+    margin: 0 10px;
+    left: -30%;
+    position: relative;
+   
+}
+/*---CARD-FRONT---*/
+/*---CARD-BACK---*/
+.card-back{
+
+    width: 200px;
+    height: 300px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: absolute;
+    right: 0px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    transition: 1s;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    align-items: center;
+    justify-items: center;
+    
+    
+    
+    /*backface-visibility: hidden;*/
+    
+   
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 0;
+}
+.card-global:hover .card-front{
+    transform:  rotateY(180deg);
+}
+
+
+.card-global:hover .card-back{
+    transform: rotateY(0deg);
+    
+}
+
+/*---.card-back:hover{
+    transform: perspective(500px) rotateY(0deg);
+}---*/
+
+.h2-cardback{
+    font-size: 15px;
+    font-family: 'Roboto-bold', sans-serif;
+    color: #312C51;
+    flex-grow: 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10% 10%;
+    margin-block-end: 0em;
+    height: auto;
+     
+}
+
+.card-li{
+    text-align: center;
+    line-height: 160%;
+    font-family: 'Roboto-bold', sans-serif;
+    color: #312C51;
+}
+
+/*---CARD-BACK---*/
+
+/*---dispositon---*/
