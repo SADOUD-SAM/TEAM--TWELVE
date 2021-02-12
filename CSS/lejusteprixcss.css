@@ -149,6 +149,9 @@ h2{
     color: #312C51;
     font-size: 18px;
 }
+.bucard2{
+    display: flex;
+}
 button{
     display: none;
 }
@@ -163,6 +166,12 @@ button{
     display: none;
     /* Mettre ID en commun */
 }
+
+.photo{
+    display: none;
+    width: 100px;
+}
+
 /* JOJO's CSS */
 /* BOUTON */
 #guessField{
@@ -225,7 +234,7 @@ button{
     font-family: 'Roboto-bold', sans-serif;
     margin: 0% 2%;
     color:#312C51;
-    margin: 10% 0% 5% 0%;
+
 }
 #Lower{
     background-color: #F0C38E;
@@ -243,7 +252,7 @@ button{
     background-color: #7DD877;
     border: solid 0px;
     border-radius: 10px;
-    width: 70px;
+    width: 80px;
     height: 22px;
     font-family: 'Roboto-bold', sans-serif;
     margin: 0% 2%;
