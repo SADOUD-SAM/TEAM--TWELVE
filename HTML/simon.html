@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG essai</title>
+    <link rel="stylesheet" href="../CSS/simon.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8555f5d6f4.js" crossorigin="anonymous"></script>
+    <audio id="son1">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+    </audio>
+    <audio id="son2">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+        </audio>
+    <audio id="son3">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+        
+    </audio>
+    <audio id="son4">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+        </audio>
+        <audio id="ButtonWrongClick" src="http://www.freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
+
+</head>
+<body>
+    <header>
+        <div class="logoteam">
+               <a href="../Index.html" class="logoteam">Team twelve</a>
+           </div>
+
+       <div class="menu">
+               <ul class="listnav">
+                   <li><a href="../Index.html" class="navlink">Home</a></li>
+                   <li class="nav-deroulant"><a href="#game" class="navlink">Games <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sous-nav">
+                        <li><a href="../HTML/pixeldrawer.html" >PIXEL DRAWER</a></li>
+                        <li><a href="../HTML/Click_Counter.html" >CLICK COUNTER</a></li>
+                        <li><a href="../HTML/LeJustePrix.html" >THE PRICE IS RIGHT</a></li>
+                        <li><a href="../HTML/simon.html">SIMON</a></li>
+                        <li><a href="../HTML/snake.html">SNAKE</a></li>
+                    </ul>
+                </li>
+                   <li><a href="../HTML/team.html" class="navlink">Team</a></li>
+                   <li><a href="https://github.com/Team-Twelve12/Projet_Divertissement" class="navlink" target = "_blank"><i class="fab fa-github"></i></a></li>
+               </ul>
+       
+       </div>
+
+   </header>
+   
+    <div class="round">
+        <div class="round1">
+        </div>
+
+        <div class="round2">
+        </div>
+    </div>
+
+    <div class="Game_Name">
+
+        <a href="../Index.html"><i class="fas fa-chevron-left"></i> Back </a>
+        <h1>Simon</h1>
+
+    </div>
+
+    <!-- <div class="container">
+<div class="presentation">
+    <div class="explication"> -->
+        <!-- <h1>JACADI(simon game)</h1>
+        <p>Le jeu du Simon trouve son origine dans le jeu pour enfant Jacques a dit, d'où il tire également son nom, <br>puisque dans les pays anglophones ce n'est pas Jacques mais Simon (Simon Says…) qui donne les ordres.<br> Le jeu, électronique, éclaire une des quatre couleurs et produit un son toujours associé à cette couleur.</p>
+        <a href="https://youtu.be/EJU-MijmqMM"> vidéo</a>
+    </div>
+    <div class="image">
+    
+    </div> -->
+    <main>
+        <div class="card">
+        
+            <div class="play">
+                <button class="start">Start</button>
+                <div class="offButtom">
+                    <input type="checkbox" class="checkboxStart" id="on">
+                    <button class="off">Off</button>
+                </div>
+              
+            </div>
+            <div class=" buttons">
+                <button class=" red "></button>
+                <button class=" yellow"></button>
+                <button class=" green"></button>
+                <button class=" blue"></button>
+            </div>
+            <div class="level">Level :</div>
+        </div>
+
+        <div class="expli">
+
+            <h2>Game description</h2>
+            <p>Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison with software programming by Lenny Cope. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex. Once the user fails or the time limit runs out ( only the former in our case) the game is over.
+
+                It gets its name from the simple children's game of Simon Says, but the gameplay is based on Atari's unpopular Touch me arcade game from 1974.
+                </p>
+            
+            <a href="https://en.wikipedia.org/wiki/Simon_(game)" target = "_blank"><button>Wikipédia</button></a>
+    </div>
+    
+    </main>
+    <footer>
+        <p>© TEAM TWELVE - Hetic Webp2023 </p>
+    </footer>
+    <script src="../JS/simon.js" ></script> 
+</body>
+</html>

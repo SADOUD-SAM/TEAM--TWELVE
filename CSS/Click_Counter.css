@@ -1,0 +1,155 @@
+body {
+    display:grid;
+    margin: 0;
+    font-family:'Roboto-regular', sans-serif;
+}
+
+/*---BACKGROUND---*/ 
+.round{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index:-1;  
+}
+.round1{
+    background-color: #F1AA9B;
+    width: 500px;
+    height: 500px;
+    border-radius: 600px;
+    position: relative;
+    top: 12%;
+    left: 77%;
+    order: 2;
+}
+.round2{
+    background-color: #F0C38E;
+    width: 500px;
+    height: 500px;
+    border-radius: 600px;
+    order: 1;
+    overflow: hidden;
+    right: 5%;
+    top: 15%;
+    position: relative;
+} 
+/*---BACKGROUND---*/
+
+/*---EXPLICATION DU JEU---*/
+.expli{
+   
+    width:400px;
+    height:400px;
+    border-radius: 55px;
+    
+}
+p{
+    font-family:'Roboto-light', sans-serif;
+    color: #48426D;
+    font-size: 16px;
+    line-height: 150%;
+}
+h2{
+    font-family:'Roboto-bold', sans-serif;
+    color: #48426D;
+    font-size: 20px;
+}
+.expli > a > button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #F0C38E;
+    border:none;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    font-family:'Roboto-regular', sans-serif;
+    color: #312C51;
+    font-size: 18px;
+}
+/*---EXPLICATION DU JEU---*/
+
+/*---MAIN---*/
+main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.Game_Name{
+    font-weight: 700;
+}
+/*---MAIN---*/
+
+/*---TITRE DU JEU ET LE BACK---*/
+h1{
+    font-family: 'Roboto-bold', sans-serif;
+    color: #312C51;
+    flex-grow: 2;
+    text-align: center;
+    text-transform: uppercase;
+}
+.Game_Name{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+    
+.Game_Name > a {
+    color: #312C51;
+    font-family:'Roboto-light', sans-serif;
+    text-decoration: none;
+} 
+/*---TITRE DU JEU ET LE BACK---*/
+ 
+/*---JEU---*/
+.counter{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.numbers{
+   align-self: center;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    margin-top: 18px;
+    border:10px solid #F0C38E;
+    border-radius: 100%;
+    font-size: 60px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #312C51;
+    
+
+}
+.reset{
+    right:0;
+    width: 120px;
+    height: 40px;
+    margin-right: 15px;
+    border:none;
+    border-radius: 20px;
+    background: #F1AA9B;
+    color: #312C51;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+
+}
+.click{
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius:20px;
+    background: #312C51;
+    color: #F0C38E;
+    font-size: 18px;
+    text-align: center;
+    z-index: 6;  
+}
+/*---JEU---*/
+

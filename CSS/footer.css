@@ -1,0 +1,17 @@
+/*---footer*/
+footer {
+    margin-top: 40px;
+    text-align: center;
+    DISPLAY: flex;
+    justify-content: center;
+    position: relative;
+    top: 377%;
+
+    
+} 
+footer > p{
+    font-size:12px;
+    color: #F1AA9B;
+    font-family:'Roboto-regular', sans-serif;
+}
+/*--- footer ---*/
