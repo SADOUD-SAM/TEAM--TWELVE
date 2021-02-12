@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8555f5d6f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/lejusteprixcss.css">    
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    <title>☺💲 LE JUSTE PRIX 💲☺</title>
+    
+</head>
+<body>
+    <header>
+
+        <div class="logoteam">
+               <a href="../Index.html" class="logoteam">Team twelve</a>
+           </div>
+
+       <div class="menu">
+               <ul class="listnav">
+                   <li><a href="../Index.html" class="navlink">Home</a></li>
+                   <li class="nav-deroulant"><a href="#game" class="navlink">Games <i class="fas fa-chevron-down"></i></a>
+                    <ul class="sous-nav">
+                        <li><a href="../HTML/pixeldrawer.html" >PIXEL DRAWER</a></li>
+                        <li><a href="../HTML/Click_Counter.html" >CLICK COUNTER</a></li>
+                        <li><a href="../HTML/LeJustePrix.html" >THE PRICE IS RIGHT</a></li>
+                        <li><a href="../HTML/simon.html" >SIMON</a></li>
+                        <li><a href="../HTML/Snake.html" >SNAKE</a></li>
+                    </ul>
+                </li>
+                   <li><a href="../HTML/team.html" class="navlink">Team</a></li>
+                   <li><a href="https://github.com/Team-Twelve12/Projet_Divertissement" class="navlink" target = "_blank"><i class="fab fa-github" target = "_blank"></i></a></li>
+               </ul>
+       
+       </div>
+
+   </header>
+   
+    <div class="round">
+        <div class="round1">
+        </div>
+
+        <div class="round2">
+        </div>
+    </div>
+
+    <div class="Game_Name">
+
+        <a href="../Index.html"><i class="fas fa-chevron-left"></i> Back </a>
+        <h1>The Price Is Right</h1>
+
+    </div>
+    <main>
+    <div id="box">
+        <h2 class="titrer1">Round 1</h2>
+        <p>Devinez le juste prix entre 1 et 100</p> 
+
+        <div> 
+        
+            <input type="number" id="guessField" class="guessField" placeholder=" Entrer un prix">
+            <input type="submit" value="Valider"  id="submitguess">
+            <div id="raiponce"></div><br>
+            <input id="reset"    type="button"   class="reset" value="Reset">
+            <input id="continue" type="button"   class="continue" value="Continue to Part 2">
+        </div> 
+        <!-- class="guessSubmit" -->
+    </div>  
+    <!--Pour le Random en JavaScript https://www.w3schools.com/js/js_random.asp -->
+    <!--Pour le getElementById en JavaScript https://developer.mozilla.org/fr/docs/Web/API/Document/getElementById // https://www.youtube.com/watch?v=yIzlaTMx9nU -->
+
+    <!-- ==========================================Part 2======================================== -->
+
+    <div id="box2">
+        <h2 id="h12">Le juste prix part 2</h2> 
+        <p id="p12">Pensez a un juste prix entre 1 et 100 et l'ordinateur va le trouver</p> 
+
+        <button onclick="res()" id="res">Voir les scores !</button>
+        <button onclick="PlusHaut()" id="Higher">Plus haut</button>
+        <button onclick="PlusBas()"id="Lower">Plus bas</button>
+        <button onclick="OUI()"id="Yes">C'est ça !</button>
+        <div id="answer"></div>
+
+        <div> 
+            <label id="EnterNbr"    for="EnterNbr">Laissez l'ordinateur devinez:</label>
+            <input name ="EnterNbr" type="button" onclick="UserChoice()" value="Commencer" id="UserChoice">
+            <input id="reset2"      type="button" class="reset2" value="Reset">
+        </div> 
+
+    </div>   
+
+    <!-- Error message si chaine de caracteres ou vide ou quoi CHECKED 1/1-->
+    <!-- Afficher le 2eme exo apres avoir reussi le 1er CHECKED 2/2-->
+    <!-- Le jeu se deroule en deux manches CHECKED 2/2-->
+    <!--Boutton part2 CHECKED 1/1-->
+    <!--Input most take integer CHECKED-->
+    <!--Boutton part2 CHECKED 1/1-->
+    <!-- Create variable pour reset exo 2 = GuessNbr CHECKED-->
+    <!-- RESET BUTTON NEEDED CHECKED 2/2-->
+    <!--Cacher boutton Pass Part2 CHECKED-->
+    <!--Cacher boutton Reset Debut exo2 CHECKED-->
+    <!--Cacher boutton Reset quand on reset/Win CHECKED-->
+    <!-- Comptabiliser le nombre d'essaies pour chaques manche CHECKED 2/2, le comparer, l'afficher et dire qui est le gagnant -->
+    <!-- =============================================================================================== -->
+
+    <!-- Moins d'essaies = chicken dinner -->
+    <!--Bouger GameOver to part2-->
+
+    <!-- mettre les prompts en text in box -->
+    <div class="expli">
+
+            <h2>Game description</h2>
+            <p>The Price Is Right is a television game show franchise originally produced by Mark Goodson and Bill Todman, and created by Bob Stewart.
+                In the show, contestants compete to win cash and prizes by guessing the pricing of merchandise.
+                In this case, we’re playing a simplified version of the game, in which we try to guess the number the computer is thinking of and keep track of your number of guesses, and in a second part, think of a number and see how many tries the computer takes to guess it. We then compare our number of tries, whoever has the least wins the game !
+                </p>
+            
+            <a href="https://fr.wikipedia.org/wiki/The_Price_Is_Right" target = "_blank"><button>Wikipédia</button></a>
+    </div>
+
+    <script type src="../JS/JustePrix.js"></script>
+    </main>
+
+
+    <footer>
+        <p>© TEAM TWELVE - Hetic Webp2023 </p>
+    </footer>
+</body> 
+</html>
